@@ -1,0 +1,44 @@
+{
+  "name": "vouchers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-protos": "tools/build-protos.sh",
+    "build-resolvers": "node ./tools/build-resolvers",
+    "build": "rimraf ./build && tsc",
+    "start-dev": "npm run build && ts-node ./build/src/main.js",
+    "test-db": "ts-node ./src/database/index.ts",
+    "migrate": "./node_modules/.bin/ts-node ./node_modules/.bin/typeorm migration:run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/atob": "^2.1.2",
+    "@types/node": "^13.13.5",
+    "@types/object-hash": "^1.3.3",
+    "dotenv": "^8.2.0",
+    "google-protobuf": "^3.11.4",
+    "grpc": "^1.24.2",
+    "grpc-tools": "^1.8.1",
+    "grpc_tools_node_protoc_ts": "^3.0.0",
+    "rimraf": "^3.0.2",
+    "ts-node": "^3.3.0",
+    "tslint": "^6.1.2",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "@google-cloud/storage": "^5.2.0",
+    "@grpc/proto-loader": "^0.5.5",
+    "@types/google-protobuf": "^3.7.2",
+    "@types/jsonwebtoken": "^8.5.0",
+    "cross-blob": "^2.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.18.1",
+    "proto-loader": "^0.2.0",
+    "rxjs": "^6.6.2",
+    "typeorm": "^0.2.25",
+    "ulid": "^2.3.0"
+  }
+}

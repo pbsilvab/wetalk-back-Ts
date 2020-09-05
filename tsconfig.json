@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+       "outDir": "./build",
+       "noUnusedParameters": true,
+       "allowSyntheticDefaultImports": true,
+       "allowJs": true,
+       "target": "es5",
+       "moduleResolution": "node",
+       "lib": [
+          "es5",
+          "es6",
+          "ESNext.AsyncIterable",
+          "dom",
+          "dom.iterable"
+       ],
+       "typeRoots": [
+          "./node_modules/@types",
+          "./typings"
+       ],
+       "emitDecoratorMetadata": true,
+       "experimentalDecorators": true,
+       "noImplicitAny": true,
+       "sourceMap": true,
+       "strict": true,
+       "esModuleInterop": true,
+       "resolveJsonModule": true,
+       "forceConsistentCasingInFileNames": true
+    }
+ }
